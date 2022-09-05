@@ -16,8 +16,6 @@ namespace ClassRoomNet60
             BirthDay = birthday;
         }
 
-
-
         public string Name { get; private set; }
         public int BirthMonth { get; private set; }
         public int BirthDay { get; private set; }
