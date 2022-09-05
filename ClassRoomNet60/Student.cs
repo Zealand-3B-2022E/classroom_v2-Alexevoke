@@ -19,5 +19,11 @@ namespace ClassRoomNet60
         public string Name { get; private set; }
         public int BirthMonth { get; private set; }
         public int BirthDay { get; private set; }
+
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, Birthmonth: {BirthMonth}, Birthday: {BirthDay}"; 
+        }
     }
 }
