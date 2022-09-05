@@ -18,6 +18,12 @@ namespace ClassRoomNet60
 
         }
 
+        public ClassRoom(string className, DateTime semesterStart)
+        {
+            ClassName = className;
+            ClassList = new List<Student>();
+            SemesterStart = semesterStart;
+        }
 
         public string ClassName { get; set; }
         public List<Student> ClassList { get; set; }
