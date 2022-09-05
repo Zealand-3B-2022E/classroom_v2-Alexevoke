@@ -29,6 +29,24 @@ namespace ClassRoomNet60
         public List<Student> ClassList { get; set; }
         public DateTime SemesterStart { get; set; }
 
+        public void BirthdaysBySeason()
+        {
+            var seasons =
+                from student in ClassList
+                group student by student.Season() into bdaySeason
+                select new
+                {
+                    Season = bdaySeason.Key,
+                    Count = bdaySeason.Count(),
+                };
+
+            foreach (var season in seasons)
+            {
+                Console.WriteLine(season.Season);
+                Console.WriteLine(season.Count);
+            }
+        }
+
         public override string ToString()
         {
             return $"Classname: {ClassName}, Semester start: {SemesterStart.Day}/{SemesterStart.Month}/{SemesterStart.Year}";

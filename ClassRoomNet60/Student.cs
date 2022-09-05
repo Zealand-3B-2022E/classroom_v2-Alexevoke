@@ -8,6 +8,7 @@ namespace ClassRoomNet60
 {
     public class Student
     {
+        private int _birthmonth;
 
         public Student(string name, int birthmonth, int birthday)
         {
@@ -17,26 +18,34 @@ namespace ClassRoomNet60
         }
 
         public string Name { get; private set; }
-        public int BirthMonth { get; private set; }
+        public int BirthMonth {
+            get { return _birthmonth; }
+            private set {
+                if (value >= 1 && value <= 12)
+                {
+                    _birthmonth = value;
+                }
+            }
+        }
         public int BirthDay { get; private set; }
 
         public string Season()
         {
             if (BirthMonth >= 3 && BirthMonth <= 5)
             {
-                return "The student is born in spring";
+                return "Spring";
             }
             else if (BirthMonth >= 6 && BirthMonth <= 8)
             {
-                return "The student is born in summer";
+                return "Summer";
             }
             else if (BirthMonth >= 9 && BirthMonth <= 11)
             {
-                return "The student is born in autumn";
+                return "Autumn";
             }
             else
             {
-                return "The student is born in winter";
+                return "Winter";
             }
         }
 
