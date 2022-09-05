@@ -15,6 +15,7 @@ Console.WriteLine(classroom1.ToString());
 foreach (Student student in classroom1.ClassList)
 {
     Console.WriteLine(student.ToString());
+    Console.WriteLine(student.Season());
 }
 
 

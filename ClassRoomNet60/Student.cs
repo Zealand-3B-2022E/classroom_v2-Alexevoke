@@ -20,6 +20,25 @@ namespace ClassRoomNet60
         public int BirthMonth { get; private set; }
         public int BirthDay { get; private set; }
 
+        public string Season()
+        {
+            if (BirthMonth >= 3 && BirthMonth <= 5)
+            {
+                return "The student is born in spring";
+            }
+            else if (BirthMonth >= 6 && BirthMonth <= 8)
+            {
+                return "The student is born in summer";
+            }
+            else if (BirthMonth >= 9 && BirthMonth <= 11)
+            {
+                return "The student is born in autumn";
+            }
+            else
+            {
+                return "The student is born in winter";
+            }
+        }
 
         public override string ToString()
         {
